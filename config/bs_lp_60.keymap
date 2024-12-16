@@ -13,6 +13,15 @@
 #define NAV_L 1
 
 / {
+    macros {
+        global: global {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "GLOBAL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,7 +59,7 @@
 &bt BT_SEL 0  &trans    &kp UP    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans   &trans   &trans
 &bt BT_SEL 1  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans            &trans
 &bt BT_SEL 2  &trans    &trans    &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans
-&bt BT_SEL 3  &trans              &trans                     &trans                          &kp PSCRN  &trans   &trans   &trans
+&bt BT_SEL 3  &trans              &trans                     &trans                          &kp PSCRN  &trans   &trans   &kp LA(LC(SPACE))
             >;
         };
     };
