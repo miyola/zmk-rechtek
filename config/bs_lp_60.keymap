@@ -14,15 +14,6 @@
 #define NAV_L 1
 
 / {
-    macros {
-        global: global {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <>;
-            label = "GLOBAL";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
